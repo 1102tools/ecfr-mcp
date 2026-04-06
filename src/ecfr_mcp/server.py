@@ -518,6 +518,10 @@ async def compare_versions(
     (January 2017 to present). Both dates must not exceed the title's
     up_to_date_as_of value.
     """
+    if date_before > date_after:
+        raise ValueError(
+            f"date_before ({date_before}) must be earlier than date_after ({date_after})."
+        )
     params: dict[str, str] = {}
     if chapter:
         params["chapter"] = chapter
