@@ -1,5 +1,5 @@
 """Round 3: creative chaos. Real-world edge cases a 1102 would actually hit,
-combined with the dumbest things an LLM might hallucinate as inputs."""
+combined with edge cases an LLM might hallucinate as inputs."""
 from __future__ import annotations
 import asyncio, sys, time
 from ecfr_mcp.server import (

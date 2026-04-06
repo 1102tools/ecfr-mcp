@@ -1,5 +1,5 @@
-"""Round 2: pure bullshit adversarial test. Try to break ecfr-mcp with
-the dumbest, weirdest, most malicious inputs imaginable."""
+"""Round 2: adversarial edge case test. Try to break ecfr-mcp with
+extreme inputs, injection payloads, and boundary probes."""
 from __future__ import annotations
 import asyncio, sys
 from ecfr_mcp.server import (
@@ -249,7 +249,7 @@ async def main():
     failed = sum(1 for _,s,_ in results if s == "FAIL")
     info = sum(1 for _,s,_ in results if s == "INFO")
     print(f"\n{'='*60}")
-    print(f"eCFR R2 BULLSHIT: {passed}/{total} PASS, {failed} FAIL, {info} INFO")
+    print(f"eCFR R2 ADVERSARIAL: {passed}/{total} PASS, {failed} FAIL, {info} INFO")
     print(f"{'='*60}")
     if failed:
         print("\nFAILURES:")
